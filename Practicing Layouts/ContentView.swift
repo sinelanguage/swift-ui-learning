@@ -10,7 +10,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            MapView()
+                .edgesIgnoringSafeArea(.top)
+                .frame(height: 300)
+            
+            CircleImage()
+                .offset(y:-130)
+                .padding(.bottom, -130)
+            
+            VStack() {
+                Text("Milton")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.blue)
+                HStack {
+                    Text("Ontario")
+                        .font(.subheadline)
+                    Text("Canada").font(.subheadline)
+                }
+                
+            }
+            Spacer()
+        }
     }
 }
 
